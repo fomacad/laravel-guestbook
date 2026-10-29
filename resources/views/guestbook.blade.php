@@ -9,7 +9,7 @@
   </style>
 </head>
 <body>
-  <h1>Guestbook</h1>
+  <h1>Guestbook V2</h1>
   <p><small>Database host: {{ $dbHost }}</small></p>
 
   <form method="POST" action="{{ url('/entries') }}">
