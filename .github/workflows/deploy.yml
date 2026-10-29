@@ -27,7 +27,7 @@ jobs:
         env:
           HOST: ${{ secrets.SSH_HOST }}
         run: |
-          ssh deploy@"$HOST" 'cd /var/www/guestbook && git fetch origin main && git reset --hard origin/main && bash scripts/deploy.sh'
+          ssh ubuntu@"$HOST" 'cd /var/www/guestbook && git fetch origin main && git reset --hard origin/main && bash scripts/deploy.sh'
 
       - name: Health check
         env:
