@@ -14,6 +14,7 @@ Route::post('/entries', function (Request $r) {
     Entry::create($r->validate([
         'name'    => 'required|max:100',
         'message' => 'required|max:1000',
+	'city' => 'nullable|max:100',
     ]));
     return redirect('/');
 });

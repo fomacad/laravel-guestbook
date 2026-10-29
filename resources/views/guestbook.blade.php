@@ -15,6 +15,7 @@
   <form method="POST" action="{{ url('/entries') }}">
     @csrf
     <input name="name" placeholder="Name" required>
+    <input name="city" placeholder="City">
     <textarea name="message" placeholder="Message" required></textarea>
     <button>Sign</button>
   </form>
@@ -22,7 +23,7 @@
 
   <hr>
   @foreach ($entries as $e)
-    <p><b>{{ $e->name }}</b>: {{ $e->message }}</p>
+    <p><b>{{ $e->name }}</b> ({{ $e->city }}): {{ $e->message }}</p>
   @endforeach
 </body>
 </html>
