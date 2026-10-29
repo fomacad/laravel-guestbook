@@ -16,7 +16,7 @@ Route::post('/entries', function (Request $r) {
         'message' => 'required|max:1000',
 	'city' => 'nullable|max:100',
     ]));
-    return redirect('/');
+    return redirect('/')
 });
 
 Route::get('/health', function () {
